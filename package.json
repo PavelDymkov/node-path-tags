@@ -1,0 +1,39 @@
+{
+    "name": "node-path-tags",
+    "version": "0.7.1",
+    "description": "NodeJs library of the tag functions for create a path string",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PavelDymkov/node-path-tags.git"
+    },
+    "author": {
+        "name": "Pavel Dymkov",
+        "email": "dymkov86@gmail.com"
+    },
+    "keywords": [
+        "node",
+        "path",
+        "template",
+        "tag"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/PavelDymkov/node-path-tags/issues"
+    },
+    "homepage": "https://github.com/PavelDymkov/node-path-tags#readme",
+    "scripts": {
+        "pub": "packagr",
+        "pretest": "tsc -p test-src/tsconfig.json",
+        "test": "jest --rootDir test"
+    },
+    "dependencies": {
+        "tags-factory": "^0.0.3"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.5.1",
+        "jest": "^28.1.0",
+        "npm-packagr": "^1.0.39",
+        "prettier": "^2.6.2",
+        "typescript": "^4.7.2"
+    }
+}
