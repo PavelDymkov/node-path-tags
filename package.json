@@ -1,6 +1,6 @@
 {
     "name": "node-path-tags",
-    "version": "0.7.1",
+    "version": "0.7.0",
     "description": "NodeJs library of the tag functions for create a path string",
     "repository": {
         "type": "git",
