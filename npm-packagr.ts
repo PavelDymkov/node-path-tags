@@ -22,7 +22,7 @@ npmPackagr({
 
         badge(BadgeType.Test),
 
-        // increaseVersion(),
+        increaseVersion(),
 
         packageJSON((packageJson) => {
             delete packageJson.devDependencies;
