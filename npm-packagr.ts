@@ -22,13 +22,13 @@ npmPackagr({
 
         badge(BadgeType.Test),
 
-        increaseVersion(),
+        // increaseVersion(),
 
         packageJSON((packageJson) => {
             delete packageJson.devDependencies;
             delete packageJson.scripts;
 
-            packageJson.main = "lib.js";
+            packageJson.main = "main.js";
         }),
 
         badge(BadgeType.License),
