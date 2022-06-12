@@ -27,7 +27,7 @@
         "test": "jest --rootDir test"
     },
     "dependencies": {
-        "tags-factory": "^0.0.3"
+        "tags-factory": "^0.7.5"
     },
     "devDependencies": {
         "@types/jest": "^27.5.1",

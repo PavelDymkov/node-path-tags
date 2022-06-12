@@ -6,6 +6,7 @@ import {
     git,
     npx,
     packageJSON,
+    Pipeline,
     publish,
     test,
     version,
@@ -21,10 +22,7 @@ npmPackagr({
 
         badge(BadgeType.Test),
 
-        version("patch", {
-            commitHooks: false,
-            gitTagVersion: false,
-        }),
+        increaseVersion(),
 
         packageJSON((packageJson) => {
             delete packageJson.devDependencies;
@@ -45,3 +43,17 @@ npmPackagr({
         }),
     ],
 });
+
+function increaseVersion(): Pipeline {
+    return () => {
+        patch();
+        patch();
+    };
+}
+
+function patch(): void {
+    version("patch", {
+        commitHooks: false,
+        gitTagVersion: false,
+    });
+}
