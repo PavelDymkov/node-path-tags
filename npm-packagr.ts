@@ -45,15 +45,13 @@ npmPackagr({
 });
 
 function increaseVersion(): Pipeline {
-    return () => {
-        patch();
-        patch();
-    };
-}
-
-function patch(): void {
-    version("patch", {
+    const pipe = version("patch", {
         commitHooks: false,
         gitTagVersion: false,
     });
+
+    return (context) => {
+        pipe(context);
+        pipe(context);
+    };
 }
